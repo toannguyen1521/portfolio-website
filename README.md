@@ -2,7 +2,7 @@
 
 Personal portfolio website of Nguyen Toan — IC/VLSI Design Student & Cybersecurity Enthusiast based in Viet Nam.
 
-🌐 **Live Site:** https://toannguyen1521.github.io/portfolio-template/
+🌐 **Live Site:** https://toannguyen1521.github.io/portfolio-website/
 
 ## About
 
