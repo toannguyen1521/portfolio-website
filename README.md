@@ -13,5 +13,7 @@ This is my personal portfolio showcasing my experience in:
 
 ## Contact
 
-📧 toannguyen200662009@gmail.com  
+📧 toannguyen20902@gmail.com  
 🐙 GitHub: https://github.com/toannguyen1521
+
+❤️
