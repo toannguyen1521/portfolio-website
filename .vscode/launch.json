@@ -8,7 +8,7 @@
             "type": "msedge",
             "request": "launch",
             "name": "Open index.html",
-            "file": "d:\\Personal Profile\\portfolio-template-master\\portfolio-template-master\\index.html"
+            "file": "D:\\Visual Studio Code\\HTML\\Personal Profile\\portfolio-template-master\\portfolio-template-master\\index.html"
         }
     ]
 }
