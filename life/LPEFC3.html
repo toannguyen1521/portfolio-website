@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life & Personal</title>
+    <style>
+        /* Khởi tạo giao diện tối đồng bộ với trang chủ */
+        body {
+            background-color: #0b0b0b;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* Thanh Menu (Header) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #111111;
+            border-bottom: 1px solid #222222;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff3333; /* Màu đỏ giống logo chữ T của bạn */
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #cccccc;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        /* Vùng chứa nội dung bài viết chính */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Nút quay lại trang chủ */
+        .back-btn {
+            display: inline-block;
+            color: #888888;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .back-btn:hover {
+            color: #ff3333;
+        }
+
+        /* Tiêu đề bài viết */
+        h1 {
+            color: #ffffff;
+            font-size: 32px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        /* Ngày tháng + Chuyên mục */
+        .meta-info {
+            font-size: 14px;
+            color: #888888;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 15px;
+        }
+        .meta-info .tag {
+            color: #ff3333;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* -----------------------------------------------------
+           PHẦN NỘI DUNG CHÍNH (Định dạng cho văn bản từ Word paste vào)
+        ----------------------------------------------------- */
+        .article-content {
+            font-size: 17px;
+            color: #dddddd;
+        }
+
+        /* Các tiêu đề lớn nhỏ trong bài viết */
+        .article-content h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-top: 35px;
+            border-left: 4px solid #ff3333;
+            padding-left: 10px;
+        }
+
+        .article-content h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+
+        /* Đoạn văn */
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Hình ảnh minh họa trong bài viết */
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 6px;
+            border: 1px solid #333333;
+        }
+
+        /* Chú thích ảnh */
+        .img-caption {
+            text-align: center;
+            font-style: italic;
+            color: #888888;
+            font-size: 14px;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+
+        /* Khối code/công thức đặc biệt (nếu có) */
+        .article-content pre, .article-content code {
+            background-color: #161616;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #ff8888;
+            font-family: Consolas, Monaco, monospace;
+        }
+
+        /* Footer dưới cùng */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666666;
+            font-size: 14px;
+            border-top: 1px solid #222222;
+            margin-top: 60px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. THANH MENU (Đồng bộ trang chủ) -->
+    <header class="blog-header-banner" style="background-image: linear-gradient(rgba(11, 11, 11, 0.75), rgba(11, 11, 11, 0.75)), url('../images/Skills.PNG'); background-size: cover; background-position: center 20%; padding: 40px 8%; border-bottom: 2px solid #ff3333;">    
+        <a href="https://toannguyen1521.github.io/portfolio-website/" class="logo-link">
+              <!-- Gọi file logo từ tab xuống -->
+               <img src="../images/logo.png" alt="Logo" class="site-logo" width="45">
+               <!-- Dòng chữ link hiện lên khi di chuột -->
+        </a>
+        <nav>
+            <a href="../about/about_index.html">About</a>
+            <a href="../skills/skills_index.html">Skills</a>
+            <a href="../contact/contact_index.html">Contact</a>
+            <a href="../myblog/myblog_index.html" style="color: #ff3333;">My Blog</a>
+        </nav>
+    </header>
+
+    <!-- 2. VÙNG CHỨA NỘI DUNG BÀI VIẾT -->
+    <div class="container">
+        
+        <a href="../life/life&personal.html" class="back-btn">← Quay lại trang Đời Sống và Xã Hội</a>
+
+        <!-- Tiêu đề lớn của bài viết -->
+        <h1>Life & Personal</h1>
+        
+        <!-- Thông tin phụ -->
+        <div class="meta-info">
+            <span class="tag">LIFE</span>
+            <span class="date">Đăng ngày 23/04/2026</span>
+        </div>
+
+        <!-- NƠI BẠN COPY VĂN BẢN TỪ FILE WORD VÀO ĐÂY -->
+        <div class="article-content">
+    <p style="margin-bottom: 20px; color: #aaa;">
+        Càng lớn, số lần cảm thấy thật sự vui bắt đầu ít dần, thấy bỗng dưng thích hoài cổ, hoặc đơn cử hay nghĩ về những điều nhỏ nhặt nhưng khiến tâm trạng bình yên.
+    </p>
+    <p> Càng lớn, số lần làm mọi thứ một cách bột phát hoặc những quyết định theo những gì mình thích bắt đầu ít dần rồi trở nên không còn nữa. Chính vì phải lựa chọn sau quá nhiều lần cân nhắc, chính vì lựa chọn trong áp lực, nên mới dễ cô đơn.</p>
+    <p>Càng lớn, chúng ta không thể chỉ sống riêng cho bản ngã thật của mình, mà luôn phải sống vì những tham vọng khác nữa, hoặc là đi theo những phương cách đấu tranh sinh tồn theo hiện thực khốc liệt, hoặc là buộc phải giả dối để rồi đeo lên biết bao nhiêu lớp mặt nạ. Bạn bè từ đó chẳng ai có thể sẻ chia, cũng không làm cách nào trước một ai đó gỡ toàn bộ những lớp vỏ ngụy trang để cho họ thấy bản thân mình đang cô đơn nhường nào.</p>
+    <p>Càng lớn, càng nhiều vết thương, càng biết cách làm bản thân tê liệt với nỗi đau mà không cần ai giúp đỡ.</p>
+    <p>Càng lớn, càng làm quen với việc đơn phương chống chọi với mọi thứ, càng học được cách chỉ tin vào bản thân mình chứ không thể hoàn toàn trao niềm tin ấy cho một ai khác.</p>
+    <p>Càng lớn, thế giới quan càng mở rộng, các mối quan hệ nhiều lên chi chít, nhưng tâm hồn thì khép lại nhỏ xíu, chúng ta trở nên tàn nhẫn với chính mình và những người xung quanh hơn, và chúng ta lại càng cô đơn.</p>
+    <p>Người lớn, muốn lớn lên mà tâm hồn không một vết xước, muốn trái tim không bị bám bụi và tổn thương, sao mà khó quá? Chỉ đến khi nào thoảng thốt nhận ra, hành trình đơn độc cùng với quá trình trưởng thành vốn dĩ là một con đường, mới thấu hiểu hết được mọi nỗi cô đơn từ đâu mà tới.</p>
+    <p>Tôi còn chẳng có ai nhắn tin hay trò chuyện ngoài bạn cùng phòng và gia đình. Nhưng đủ lâu thì mới nhận ra càng ít bạn thì cuộc sống càng đỡ phiền và ít drama. Từ đó mình lại có nhiều thời gian để phát triển bản thân, học kĩ năng mới nhanh hơn😘. Nhưng, không có bạn bè để trò chuyện thì không phải ai cũng chịu được, ai mà chịu được như mình thì chắc chắn người đó có nội tâm rất mạnh🥹❤️</p>
+    <p>Mình cũng đang trải qua. Đúng hơn thì do tần số chúng ta phát ra bao nhiêu thì gặp những người cùng tần số đó, à mà thêm cách suy nghĩ của mỗi người khác nữa. Đã nếm trải cô dơn hơn 10 năm rồi. Từ bị bỏ rơi, cô lập, không ai giúp đỡ đã dạy cho mình cách tự đứng dậy mà không cần người khác đỡ ở sau, ngày tháng đó không quên được vì bị trầm cảm nặng với bị tổn thương tâm lý. Cô đơn ban đầu đúng là rất đáng sợ, nhưng khi nếu tiếp xúc lâu thì mình mới thấy trân trọng nó. Hãy coi đó là một người bạn bên cạnh giúp mình có được sự tập trung và hồi phục năng lượng cho việc tiếp theo❤️❤️</p>
+
+</div>
+
+
+    </div>
+
+    <!-- 3. PHẦN CHÂN TRANG -->
+    <footer>
+        <p>&copy; 2026 - Template designed & developed by <a class="link" href="../index.html">Toan</a>.</p>
+    </footer>
+
+    <script>
+function toggleFullscreen() {
+    var iframe = document.getElementById("pdf-view");
+    
+    if (!document.fullscreenElement) {
+        // Lệnh phóng to toàn màn hình cho khung PDF
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Dành cho trình duyệt Safari */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* Dành cho trình duyệt IE */
+            iframe.msRequestFullscreen();
+        }
+    } else {
+        // Thoát khỏi chế độ toàn màn hình
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+</script>
+
+</body>
+</html>

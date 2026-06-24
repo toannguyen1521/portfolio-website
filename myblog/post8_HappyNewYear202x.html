@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Blog Post - Analog Engineer's Circuit Cookbook</title>
+    <style>
+        /* Khởi tạo giao diện tối đồng bộ với trang chủ */
+        body {
+            background-color: #0b0b0b;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* Thanh Menu (Header) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #111111;
+            border-bottom: 1px solid #222222;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff3333; /* Màu đỏ giống logo chữ T của bạn */
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #cccccc;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        /* Vùng chứa nội dung bài viết chính */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Nút quay lại trang chủ */
+        .back-btn {
+            display: inline-block;
+            color: #888888;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .back-btn:hover {
+            color: #ff3333;
+        }
+
+        /* Tiêu đề bài viết */
+        h1 {
+            color: #ffffff;
+            font-size: 32px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        /* Ngày tháng + Chuyên mục */
+        .meta-info {
+            font-size: 14px;
+            color: #888888;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 15px;
+        }
+        .meta-info .tag {
+            color: #ff3333;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* -----------------------------------------------------
+           PHẦN NỘI DUNG CHÍNH (Định dạng cho văn bản từ Word paste vào)
+        ----------------------------------------------------- */
+        .article-content {
+            font-size: 17px;
+            color: #dddddd;
+        }
+
+        /* Các tiêu đề lớn nhỏ trong bài viết */
+        .article-content h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-top: 35px;
+            border-left: 4px solid #ff3333;
+            padding-left: 10px;
+        }
+
+        .article-content h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+
+        /* Đoạn văn */
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Hình ảnh minh họa trong bài viết */
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 6px;
+            border: 1px solid #333333;
+        }
+
+        /* Chú thích ảnh */
+        .img-caption {
+            text-align: center;
+            font-style: italic;
+            color: #888888;
+            font-size: 14px;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+
+        /* Khối code/công thức đặc biệt (nếu có) */
+        .article-content pre, .article-content code {
+            background-color: #161616;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #ff8888;
+            font-family: Consolas, Monaco, monospace;
+        }
+
+        /* Footer dưới cùng */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666666;
+            font-size: 14px;
+            border-top: 1px solid #222222;
+            margin-top: 60px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. THANH MENU (Đồng bộ trang chủ) -->
+    <header class="blog-header-banner" style="background-image: linear-gradient(rgba(11, 11, 11, 0.75), rgba(11, 11, 11, 0.75)), url('../images/Skills.PNG'); background-size: cover; background-position: center 20%; padding: 40px 8%; border-bottom: 2px solid #ff3333;">    
+        <a href="https://toannguyen1521.github.io/portfolio-website/" class="logo-link">
+              <!-- Gọi file logo từ tab xuống -->
+               <img src="../images/logo.png" alt="Logo" class="site-logo" width="45">
+               <!-- Dòng chữ link hiện lên khi di chuột -->
+        </a>
+        <nav>
+            <a href="../about/about_index.html">About</a>
+            <a href="../skills/skills_index.html">Skills</a>
+            <a href="../contact/contact_index.html">Contact</a>
+            <a href="../myblog/myblog_index.html" style="color: #ff3333;">My Blog</a>
+        </nav>
+    </header>
+
+    <!-- 2. VÙNG CHỨA NỘI DUNG BÀI VIẾT -->
+    <div class="container">
+        
+         <a href="../myblog/TTPAV2.html" class="back-btn">← Quay lại Thư Viện Tài Liệu Kĩ Thuật Cá Nhân của Tôi</a>
+
+        <!-- Tiêu đề lớn của bài viết -->
+        <h1>First Blog Post: Giáo trình Altium Design _ 2510</h1>
+        
+        <!-- Thông tin phụ -->
+        <div class="meta-info">
+            <span class="tag">LIFE / KỸ THUẬT</span>
+            <span class="date">Đăng ngày 02/05/2026</span>
+        </div>
+
+        <!-- NƠI BẠN COPY VĂN BẢN TỪ FILE WORD VÀO ĐÂY -->
+        <div class="article-content">
+    <p style="margin-bottom: 20px; color: #aaa;">
+        Dưới đây là toàn bộ về các kiểu chữ "Happy New Year 2202x". Bạn có thể xem hoặc tải file về ở phía dưới:
+    </p>
+
+    <!-- Khung chứa PDF và Nút phóng to -->
+    <div class="pdf-container">
+        <!-- Nút phóng to toàn màn hình (Mũi tên chéo) -->
+        <button class="fullscreen-btn" onclick="toggleFullscreen()" title="Phóng to toàn màn hình">⤢</button>
+        
+        <!-- Thêm id="fullscreen-wrapper" vào thẻ div bọc ngoài cùng -->
+         <div id="fullscreen-wrapper" class="pdf-container" style="display: flex; justify-content: center; align-items: center; background-color: #0b0b0b;">
+             
+             <!-- Thẻ ảnh của bạn (Thêm id="image-view" và định dạng CSS cho nó) -->
+              <img id="image-view" src="../images/hpny202x.png" alt="File" style="max-width: 100%; max-height: 800px; object-fit: contain; transition: transform 0.1s ease;">
+        </div>
+
+
+    <!-- KHU VỰC TẢI XUỐNG NHANH 1-CLICK Ở PHÍA DƯỚI -->
+    <div class="download-section">
+        <h3>Tải xuống tài liệu gốc</h3>
+        <p>Nếu bạn muốn lưu trữ tài liệu về máy tính hoặc điện thoại để đọc ngoại tuyến, hãy bấm vào nút bên dưới:</p>
+        
+        <!-- Thuộc tính download giúp tự động tải xuống khi click thay vì mở trang mới -->
+        <a href="../file/HappyNewYear202x.zip" download="python_HappyNewYear202x.zip" class="download-button">
+            📥 Tải xuống File Python 
+        </a>
+    </div>
+</div>
+
+
+    </div>
+
+    <!-- 3. PHẦN CHÂN TRANG -->
+    <footer>
+        <p>&copy; 2026 - Template designed & developed by <a class="link" href="../index.html">Toan</a>.</p>
+    </footer>
+
+    <script>
+// Tạo một biến để lưu trữ tỷ lệ phóng to hiện tại của ảnh (mặc định ban đầu là 1)
+let currentScale = 1;
+
+function toggleFullscreen() {
+    var wrapper = document.getElementById("fullscreen-wrapper");
+    var img = document.getElementById("image-view");
+    
+    if (!document.fullscreenElement) {
+        if (wrapper.requestFullscreen) {
+            wrapper.requestFullscreen();
+        } else if (wrapper.webkitRequestFullscreen) { /* Safari */
+            wrapper.webkitRequestFullscreen();
+        }
+        // Khi lên toàn màn hình, thiết lập kích thước ban đầu phù hợp
+        img.style.maxHeight = "800px"; 
+        img.style.maxWidth = "100%";
+        currentScale = 1; // Reset lại độ phóng to về 1
+        img.style.transform = `scale(${currentScale})`;
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+        // Trả ảnh về trạng thái ban đầu trong trang web
+        currentScale = 1;
+        img.style.transform = `scale(${currentScale})`;
+    }
+}
+
+// Lắng nghe sự kiện người dùng cuộn chuột trên khung ảnh toàn màn hình
+document.getElementById("fullscreen-wrapper").addEventListener("wheel", function(event) {
+    // Chỉ kích hoạt tính năng zoom khi đang ở chế độ phóng to toàn màn hình
+    if (document.fullscreenElement) {
+        event.preventDefault(); // Ngăn hành vi cuộn trang mặc định của trình duyệt
+
+        var img = document.getElementById("image-view");
+
+        // event.deltaY < 0 nghĩa là người dùng đang cuộn chuột lên trên (Phóng to)
+        if (event.deltaY < 0) {
+            currentScale += 0.1; // Mỗi lần cuộn tăng thêm 10% kích thước
+        } 
+        // Ngược lại là người dùng đang cuộn chuột xuống dưới (Thu nhỏ)
+        else {
+            currentScale -= 0.1; // Mỗi lần cuộn giảm đi 10% kích thước
+        }
+
+        // Giới hạn tỷ lệ thu nhỏ tối thiểu là 0.5 (một nửa) và phóng to tối đa là 5 lần để ảnh không bị biến mất
+        currentScale = Math.max(0.5, Math.min(5, currentScale));
+
+        // Áp dụng tỷ lệ phóng to/thu nhỏ vào ảnh
+        img.style.transform = `scale(${currentScale})`;
+    }
+}, { passive: false }); // Cờ passive: false giúp hàm preventDefault() hoạt động mượt mà
+
+// Đảm bảo khi bấm nút ESC để thoát chế độ toàn màn hình thì ảnh tự động reset về kích thước cũ
+document.addEventListener('fullscreenchange', () => {
+    var img = document.getElementById("image-view");
+    if (!document.fullscreenElement) {
+        currentScale = 1;
+        img.style.transform = `scale(${currentScale})`;
+    }
+});
+</script>
+
+</body>
+</html>

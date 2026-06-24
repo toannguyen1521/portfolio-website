@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="image/png" href="../images/logo.png" />
+  <title>My Blog | Nguyen Toan</title>
+  <meta name="description" content="Blog of Nguyen Toan - Life stories, project documentation and more." />
+  <link rel="stylesheet" href="../index.css" />
+  <script src="../particles.min.js"></script>
+  <style>
+    /* ===== Blog Page Styles ===== */
+    .blog {
+      padding: 2rem 0 4rem;
+    }
+
+    .blog h2 {
+      color: var(--white);
+      margin-bottom: 3rem;
+    }
+
+    .blog__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog__card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .blog__card:hover {
+      transform: translateY(-5px);
+      border-color: var(--pink);
+    }
+
+    .blog__card-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .blog__card-img-placeholder {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 3rem;
+    }
+
+    .blog__card-body {
+      padding: 1.5rem;
+    }
+
+    .blog__card-tag {
+      font-size: 1.2rem;
+      color: var(--pink);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog__card-title {
+      font-size: 1.8rem;
+      color: var(--white);
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      line-height: 1.4;
+    }
+
+    .blog__card-desc {
+      font-size: 1.4rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+
+    .blog__card-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2rem;
+      color: rgba(255,255,255,0.4);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 1rem;
+    }
+
+    .blog__card-date {
+      font-size: 1.2rem;
+    }
+
+    .blog__card-read {
+      color: var(--pink);
+      text-decoration: none;
+      font-size: 1.3rem;
+      transition: opacity 0.2s;
+    }
+
+    .blog__card-read:hover {
+      opacity: 0.8;
+    }
+
+    .blog__empty {
+      text-align: center;
+      color: rgba(255,255,255,0.4);
+      padding: 4rem 0;
+      font-size: 1.6rem;
+    }
+
+    Blocking tạm thời
+    /* ===== Card đang cập nhật - hiện biểu tượng cấm khi hover ===== */
+    .blog__card--disabled {
+      position: relative;
+    }
+    
+    .blog__card--disabled::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      border: 4px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    /* Gạch chéo góc 60 độ */
+      background: linear-gradient(
+        60deg,
+        transparent 43%,
+        rgba(255, 255, 255, 0.8) 43%,
+        rgba(255, 255, 255, 0.8) 57%,
+        transparent 57%
+        );
+        pointer-events: none;
+        z-index: 10;
+      }
+    
+
+    
+
+  </style>
+</head>
+
+<body class="subpage">
+  <div id="particles-js"></div>
+
+  <!-- ***** Header ***** -->
+  <header class="header" role="banner" id="top">
+    <div class="row">
+      <nav class="nav" role="navigation">
+        <ul class="nav__items">
+          <div class="logo-box-container">
+            <a href="https://toannguyen1521.github.io/portfolio-website/" class="logo-link">
+              <img src="../images/logo.png" alt="Logo" class="site-logo">
+            </a>
+          </div>
+          <li class="nav__item">
+            <a href="../about/about_index.html" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="../skills/skills_index.html" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="../contact/contact_index.html" class="nav__link">Contact</a>
+          </li>
+          <li class="nav__item">
+            <a href="../myblog/myblog_index.html" class="nav__link">My Blog</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main role="main">
+
+    <!-- ***** Blog ***** -->
+    <section class="blog" id="blog">
+      <div class="row">
+        <h2>My Blog</h2>
+
+        <div class="blog__grid">
+
+          <!-- 1. Thêm thẻ <a> bọc toàn bộ bên ngoài để tạo liên kết -->
+            <a href="../myblog/TTPAV2.html" class="blog_card-link" style="text-decoration: none; color: inherit; display: block;">
+              <div class="blog_card">
+                <!-- Ảnh bài viết -->
+                 <img class="blog_card-img-placeholder" src="../images/DGT.PNG" alt="Anh bai viet">
+                 <div class="blog_card-body">
+                  <p class="blog_card-tag">Documents</p>
+                  <h3 class="blog_card-title">First Blog Post</h3>
+                  <!--<p class="blog_card-desc">Chia sẻ về hành trình học IC/VLSI Design và Cybersecurity của tôi tại Đà Nẵng.</p>-->
+                  <p class="blog_card-desc">Tài liệu Kĩ Thuật cá Nhân</p>
+                  <div class="blog_card-meta">
+                    <span class="blog_card-date">22/01/2026</span>
+                    <!-- Đổi thẻ <a> thành thẻ <span> vì bên ngoài đã có thẻ <a> lớn rồi -->
+                    <span style="color: #ff3333; font-weight: bold; font-size: 14px; margin-top: 20px; display: block; text-align: right;">Read more →</span>
+                  </div>
+               </div>
+              </div>
+            </a> <!-- Đóng thẻ <a> bọc ngoài -->
+            
+
+
+          <!-- ===== Card mẫu 2 ===== -->
+            <!--<a href="#" class="blog_card-link" style="text-decoration: none; color: inherit; display: block;">-->
+            <!-- Dán đoạn style này vào thẻ a bọc ngoài của ô số 2 -->
+             <a href="#" style="background: #111111; border: 1px solid #222222; padding: 25px; border-radius: 8px; text-decoration: none; display: flex; flex-direction: column; justify-content: space-between; opacity: 0.6; cursor: not-allowed;">
+            <div>
+              <img class="blog_card-img-placeholder" src="../images/mal.png" alt="Anh bai viet">
+                <span style="background: #555555; color: #fff; font-size: 11px; font-weight: bold; padding: 3px 8px; border-radius: 3px; text-transform: uppercase;">Project</span>
+                <h3 style="color: #ffffff; margin: 15px 0 10px 0; font-size: 18px; line-height: 1.4;">Malware Analysis Lab Setup</h3>
+                <p style="color: #888888; font-size: 14px; margin: 0; line-height: 1.6;">Tài liệu hướng dẫn cách tôi xây dựng lab phân tích malware với VMware và các công cụ chuyên dụng</p>
+            </div>
+            <span style="color: #666666; font-weight: bold; font-size: 14px; margin-top: 20px; display: block; text-align: right;">Đang cập nhật</span>
+        </a>
+
+          <!-- ===== Card mẫu 3 ===== -->
+          <a href="../life/life&personal.html" class="blog_card-link" style="text-decoration: none; color: inherit; display: block;">
+              <div class="blog_card">
+                <!-- Ảnh bài viết -->
+                 <img class="blog_card-img-placeholder" src="../images/life.png" alt="Anh bai viet">
+                 <div class="blog_card-body">
+                  <p class="blog_card-tag">Story</p>
+                  <h3 class="blog_card-title">Hành trình cuộc sống và trải nghiệm cá nhân của tôi.</h3>
+                  <!--<p class="blog_card-desc">Hành trình cuộc sống và trải nghiệm cá nhân của tôi.</p>-->
+                  <p class="blog_card-desc">Life & Personal</p>
+                  <div class="blog_card-meta">
+                    <span class="blog_card-date">02/01/2026</span>
+                    <!-- Đổi thẻ <a> thành thẻ <span> vì bên ngoài đã có thẻ <a> lớn rồi -->
+                    <span style="color: #ff3333; font-weight: bold; font-size: 14px; margin-top: 20px; display: block; text-align: right;">Read more →</span>
+                  </div>
+               </div>
+              </div>
+
+        </div>
+        <!-- Thêm card mới vào đây -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ***** Footer ***** -->
+  <footer role="contentinfo" class="footer">
+    <div class="row">
+      <ul class="footer__social-links">
+        <li class="footer__social-link-item">
+          <a href="https://x.com/NguyenToan13312/" title="Link to X Profile">
+            <img src="../images/twitter.svg" class="footer__social-image" alt="Twitter">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://github.com/toannguyen1521" title="Link to Github Profile">
+            <img src="../images/github.svg" class="footer__social-image" alt="Github">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.facebook.com/nguyen.toann.200662009" title="Link to Facebook Profile">
+            <img src="../images/Facebook.svg.webp" class="footer__social-image" alt="Facebook">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://www.tiktok.com/@toan111" title="Link to TikTok Profile">
+            <img src="../images/TikTok.png" class="footer__social-image" alt="TikTok">
+          </a>
+        </li>
+        <li class="footer__social-link-item">
+          <a href="https://t.me/Toan13312" title="Link to Telegram Profile">
+            <img src="../images/telegram.png" class="footer__social-image" alt="Telegram">
+          </a>
+        </li>
+      </ul>
+      <p>&copy; 2026 - Template designed & developed by <a class="link" href="../index.html">Toan</a>.</p>
+    </div>
+  </footer>
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="../images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+
+  <script src="../index.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+        "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.1, "sync": false } },
+        "line_linked": { "enable": false },
+        "move": { "enable": true, "speed": 0.6, "direction": "right", "random": true, "straight": false, "out_mode": "out" }
+      },
+      "interactivity": {
+        "events": { "onhover": { "enable": true, "mode": "bubble" } },
+        "modes": { "bubble": { "distance": 80, "size": 6, "duration": 2, "opacity": 0.8, "speed": 3 } }
+      }
+    });
+  </script>
+</body>
+</html>

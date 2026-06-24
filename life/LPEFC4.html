@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life & Personal</title>
+    <style>
+        /* Khởi tạo giao diện tối đồng bộ với trang chủ */
+        body {
+            background-color: #0b0b0b;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* Thanh Menu (Header) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background-color: #111111;
+            border-bottom: 1px solid #222222;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff3333; /* Màu đỏ giống logo chữ T của bạn */
+            text-decoration: none;
+        }
+
+        nav a {
+            color: #cccccc;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff3333;
+        }
+
+        /* Vùng chứa nội dung bài viết chính */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Nút quay lại trang chủ */
+        .back-btn {
+            display: inline-block;
+            color: #888888;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .back-btn:hover {
+            color: #ff3333;
+        }
+
+        /* Tiêu đề bài viết */
+        h1 {
+            color: #ffffff;
+            font-size: 32px;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        /* Ngày tháng + Chuyên mục */
+        .meta-info {
+            font-size: 14px;
+            color: #888888;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #222222;
+            padding-bottom: 15px;
+        }
+        .meta-info .tag {
+            color: #ff3333;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+
+        /* -----------------------------------------------------
+           PHẦN NỘI DUNG CHÍNH (Định dạng cho văn bản từ Word paste vào)
+        ----------------------------------------------------- */
+        .article-content {
+            font-size: 17px;
+            color: #dddddd;
+        }
+
+        /* Các tiêu đề lớn nhỏ trong bài viết */
+        .article-content h2 {
+            color: #ffffff;
+            font-size: 24px;
+            margin-top: 35px;
+            border-left: 4px solid #ff3333;
+            padding-left: 10px;
+        }
+
+        .article-content h3 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 25px;
+        }
+
+        /* Đoạn văn */
+        .article-content p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Hình ảnh minh họa trong bài viết */
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 30px auto;
+            border-radius: 6px;
+            border: 1px solid #333333;
+        }
+
+        /* Chú thích ảnh */
+        .img-caption {
+            text-align: center;
+            font-style: italic;
+            color: #888888;
+            font-size: 14px;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+
+        /* Khối code/công thức đặc biệt (nếu có) */
+        .article-content pre, .article-content code {
+            background-color: #161616;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #ff8888;
+            font-family: Consolas, Monaco, monospace;
+        }
+
+        /* Footer dưới cùng */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #666666;
+            font-size: 14px;
+            border-top: 1px solid #222222;
+            margin-top: 60px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <!-- 1. THANH MENU (Đồng bộ trang chủ) -->
+    <header class="blog-header-banner" style="background-image: linear-gradient(rgba(11, 11, 11, 0.75), rgba(11, 11, 11, 0.75)), url('../images/Skills.PNG'); background-size: cover; background-position: center 20%; padding: 40px 8%; border-bottom: 2px solid #ff3333;">    
+        <a href="https://toannguyen1521.github.io/portfolio-website/" class="logo-link">
+              <!-- Gọi file logo từ tab xuống -->
+               <img src="../images/logo.png" alt="Logo" class="site-logo" width="45">
+               <!-- Dòng chữ link hiện lên khi di chuột -->
+        </a>
+        <nav>
+            <a href="../about/about_index.html">About</a>
+            <a href="../skills/skills_index.html">Skills</a>
+            <a href="../contact/contact_index.html">Contact</a>
+            <a href="../myblog/myblog_index.html" style="color: #ff3333;">My Blog</a>
+        </nav>
+    </header>
+
+    <!-- 2. VÙNG CHỨA NỘI DUNG BÀI VIẾT -->
+    <div class="container">
+        
+        <a href="../life/life&personal.html" class="back-btn">← Quay lại trang Đời Sống và Xã Hội</a>
+
+        <!-- Tiêu đề lớn của bài viết -->
+        <h1>Life & Personal</h1>
+        
+        <!-- Thông tin phụ -->
+        <div class="meta-info">
+            <span class="tag">LIFE</span>
+            <span class="date">Đăng ngày 04/05/2026</span>
+        </div>
+
+        <!-- NƠI BẠN COPY VĂN BẢN TỪ FILE WORD VÀO ĐÂY -->
+        <div class="article-content">
+    <p style="margin-bottom: 20px; color: #aaa;">
+        Có lần tôi chỉ đi cafe hoặc là đi thuyết trình thôi mà có người kêu mình  như thế này "Sao nay ăn mặc như đồ hiệu vậy?. Trông không khác gì Giám Đốc". Ủa tôi tự suy nghĩ trong đầu là "Ủa ăn mặc đẹp cũng là cách tôn trọng bản thân và người xung quanh mà", người khác nói rằng "Mi ăn mặc như thế này là chuẩn đấy, lớn rồi đâu phải trẻ con đâu mà cứ mặc áo polo mãi", trong khi những người xung quanh tôi toàn áo sơ mi quẩn tây, giày da, có khác gì họ đâu. Tôi nhận ra có người đang ghen tị với tôi rồi, nhưng để xem hắn làm gì tiếp theo?
+    </p>
+    <p>Ngồi lúc lâu thì tôi mới nhận ra là hắn đang ghen tị vì tôi mặc đồ đắt tiền hơn họ. Nhưng mà cho dù là hàng rẻ tiền thì vẫn phải ăn mặc cho đàng hoàng. Tôi còn để ý là hắn còn để ý cái đồng hồ và cái nhẫn, nhẫn tôi đã đeo khoảng 2 năm rồi và nó không có gì đặc biệt đâu. Càng tiếp xúc lâu thì mối biết hắn còn ghen tị vì tôi tự tin hơn họ trong cuộc họp, giap tiếp nữa. Nhưng tôi vẫn im lặng, việc ghent tị của họ, mình quan tâm làm cái gì</p>
+    <p>Có vẻ hắn đang làm tôi khó khăn hơn trong thuyết trình và các cuộc họp. Thứ đáp trả mạnh nhất là im lặng thực hiện và tạo ra kết quả khiến người khác thấy. Cứ nhường nhịn hay suy nghĩ thôi thì chắc không có gì đâu, nhưng nếu họ biết, họ sẽ càng ngày càng tiến và coi thường mình hơn</p>
+    <p>Đâu phải là tôi không có mắt nhìn người. Tôi còn có kinh nghiệm nhận biết được họ có ghen tị hay ganh gét  mình không</p>
+    <p>1. “Bạn thay đổi rồi”. Khi bạn phát triển, ưu tiên trong cuộc sống cũng thay đổi. Đó là điều bình thường. Nhưng với người ghen tị, câu nói này mang hàm ý: “Bạn không còn giống tôi nữa” và điều đó khiến họ khó chịu. Thay vì ủng hộ, họ muốn bạn “ở nguyên vị trí cũ” để họ không cảm thấy thua kém.</p>
+    <p>2. “Tôi không chắc lắm về chuyện đó”. Khi bạn kể về một ý tưởng hay thành tích, thay vì ủng hộ, họ phản hồi mập mờ. Họ giả vờ đang “góp ý”, nhưng thực chất là gieo nghi ngờ để làm bạn bớt tự tin. Nếu kiểu phản hồi này lặp đi lặp lại, nó có thể ảnh hưởng tiêu cực đến tinh thần của bạn.</p>
+    <p>3. “Ước gì tôi cũng có được như vậy”. Câu nói này nghe có vẻ vô hại, nhưng đôi khi ẩn chứa sự so bì. Thay vì vui cho bạn, họ tập trung vào việc bản thân đang thiếu điều gì. Thành công của bạn khiến họ cảm thấy bất an.</p>
+    <p>4. “Giờ bạn lúc nào cũng bận”. Khi bạn thăng tiến hoặc có mối quan hệ mới, quỹ thời gian chắc chắn thay đổi. Người thực sự quan tâm sẽ hiểu điều đó. Còn người ghen tị thường dùng câu này để khiến bạn thấy có lỗi, như thể bạn “bỏ rơi” họ.</p>
+    <p>5. “Bạn đúng là may mắn thật”. Nhiều người rất khó chịu khi bị gọi là “may mắn”. Bởi phía sau thành công thường là rất nhiều nỗ lực. Khi ai đó chỉ quy mọi thứ về “vận may”, họ đang phủ nhận cố gắng của bạn. Điều này thường xuất phát từ sự tự ti và bất mãn với chính cuộc sống của họ. Không phải ai nói những câu trên cũng đang ghen tị. Nhưng nếu một người thường xuyên dùng chúng với giọng điệu tiêu cực, rất có thể họ đang: So sánh bản thân với bạn, cảm thấy thua kém, tự ti về cuộc sống của mình và không biết cách bày tỏ cảm xúc lành mạnh. Quan trọng nhất: Sự ghen tị của người khác không phải lỗi của bạn. Thành công, tự tin và hạnh phúc của bạn không cần phải xin phép ai. Hãy tiếp tục sống tốt, phát triển bản thân và giữ khoảng cách lành mạnh với những mối quan hệ khiến bạn mệt mỏi.</p>
+</div>
+
+
+    </div>
+
+    <!-- 3. PHẦN CHÂN TRANG -->
+    <footer>
+        <p>&copy; 2026 - Template designed & developed by <a class="link" href="../index.html">Toan</a>.</p>
+    </footer>
+
+    <script>
+function toggleFullscreen() {
+    var iframe = document.getElementById("pdf-view");
+    
+    if (!document.fullscreenElement) {
+        // Lệnh phóng to toàn màn hình cho khung PDF
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Dành cho trình duyệt Safari */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* Dành cho trình duyệt IE */
+            iframe.msRequestFullscreen();
+        }
+    } else {
+        // Thoát khỏi chế độ toàn màn hình
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+</script>
+
+</body>
+</html>
