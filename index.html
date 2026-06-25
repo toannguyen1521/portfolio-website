@@ -88,6 +88,78 @@
 
   <main role="main">
 
+
+  <a href="#top" class="back-to-top" title="Back to Top">
+    <img src="./images/arrow-up.svg" alt="Back to Top" class="back-to-top__image"/>
+  </a>
+  <script src="./index.js"></script>
+  <script>
+  particlesJS("particles-js", {
+    "particles": {
+      "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+      "color": { "value": "#ffffff" },
+      "shape": { "type": "circle" },
+      "opacity": { "value": 0.5, "random": true, "anim": { "enable": true, "speed": 1, "opacity_min": 0.1, "sync": false } },
+      "size": { "value": 3, "random": true, "anim": { "enable": true, "speed": 2, "size_min": 0.1, "sync": false } },
+      "line_linked": { "enable": false },
+      "move": { "enable": true, "speed": 0.6, "direction": "right", "random": true, "straight": false, "out_mode": "out" }
+    },
+    "interactivity": {
+      "events": { "onhover": { "enable": true, "mode": "bubble" } },
+      "modes": { "bubble": { "distance": 80, "size": 6, "duration": 2, "opacity": 0.8, "speed": 3 } }
+    }
+  });
+</script>
+
+<script>
+  const bgList = [
+    './images/backgrounds/EFF.GIF',
+    './images/backgrounds/PIC.GIF',
+    './images/backgrounds/TVH.GIF',
+    './images/backgrounds/SKY.GIF',
+    './images/backgrounds/HEART.GIF',
+    './images/backgrounds/IMG_3366.PNG',
+    './images/backgrounds/GL.PNG',
+    './images/backgrounds/LT.PNG',
+  ];
+  const picked = bgList[Math.floor(Math.random() * bgList.length)];
+  
+  // Áp vào fog-clouds-bg thay vì body
+  const fogEl = document.querySelector('.fog-clouds-bg');
+  if (fogEl) {
+    fogEl.style.background = `url('${picked}') no-repeat center center`;
+    fogEl.style.backgroundSize = 'contain';
+    fogEl.style.opacity = '1';
+  }
+  
+  // Đồng thời áp vào body
+  document.body.style.backgroundImage = `url('${picked}')`;
+  document.body.style.backgroundSize = 'cover';        // giữ kích thước gốc của GIF
+  document.body.style.backgroundPosition = 'center';
+  
+  console.log('Background:', picked);
+</script>
+
+<script>
+function toggleFullscreen() {
+    var iframe = document.getElementById("pdf-view");
+    
+    if (!document.fullscreenElement) {
+        // Nếu chưa toàn màn hình, tiến hành phóng to khung iframe
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.webkitRequestFullscreen) { /* Safari */
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { /* IE11 */
+            iframe.msRequestFullscreen();
+        }
+    } else {
+        // Nếu đang toàn màn hình thì thoát ra
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
 </script>
 
 </body>
